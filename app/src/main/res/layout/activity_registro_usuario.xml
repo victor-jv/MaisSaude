@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".RegistroUsuario">
+
+  <EditText
+      android:id="@+id/edN"
+      style="@style/Edit_Text"
+      android:layout_marginTop="50dp"
+      android:ems="10"
+      android:hint="@string/name"
+      android:inputType="textPersonName"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView2"
+      tools:ignore="MissingConstraints" />
+
+  <EditText
+      android:id="@+id/edS"
+      style="@style/Edit_Text"
+      android:layout_marginTop="35dp"
+      android:ems="10"
+      android:hint="@string/password"
+      android:inputType="textPassword"
+      app:layout_constraintEnd_toEndOf="@+id/edN"
+      app:layout_constraintStart_toStartOf="@+id/edN"
+      app:layout_constraintTop_toBottomOf="@+id/edN"
+      tools:ignore="MissingConstraints" />
+
+  <EditText
+      style="@style/Edit_Text"
+      android:id="@+id/ConfirmaS"
+      android:layout_marginTop="35dp"
+      android:ems="10"
+      android:hint="@string/confirm_password"
+      android:inputType="textPassword"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edS"
+      tools:ignore="MissingConstraints" />
+
+  <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="90dp"
+      android:fontFamily="@font/montserrat_bold"
+      android:text="@string/register"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textColor="#000000"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/button2"
+      style="@style/Button"
+      android:layout_marginTop="125dp"
+      android:onClick="signup"
+      android:text="@string/sign_up"
+      android:textColor="#FFFFFF"
+      app:layout_constraintEnd_toEndOf="@+id/ConfirmaS"
+      app:layout_constraintStart_toStartOf="@+id/ConfirmaS"
+      app:layout_constraintTop_toBottomOf="@+id/ConfirmaS"
+      tools:ignore="MissingConstraints" />
+
+  <TextView
+      android:id="@+id/Erro"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/unconfirmed_password"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textColor="#806200FF"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toTopOf="@+id/button2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/ConfirmaS"
+      tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
